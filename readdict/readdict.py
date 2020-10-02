@@ -10,10 +10,7 @@ def main():
             row = row.rstrip()
             row = row.split()
             for word in row:
-                if word in wordList:
-                    wordList[word] += 1
-                else:
-                    wordList[word] = 1
+                wordList[word] = wordList.get(word, 0) + 1
     print(wordList)
         
 def searchWord(seekWord):
